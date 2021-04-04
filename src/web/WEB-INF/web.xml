@@ -6,4 +6,7 @@
     <listener>
         <listener-class>dev.wtamaso.addressbook.util.AddressBookContextListener</listener-class>
     </listener>
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
 </web-app>

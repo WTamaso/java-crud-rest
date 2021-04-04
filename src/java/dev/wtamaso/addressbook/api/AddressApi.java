@@ -58,6 +58,7 @@ public class AddressApi extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         try {
+            req.setCharacterEncoding("UTF-8");
             if (req.getPathInfo() != null) {
                 try {
                     Long id = Long.parseLong(req.getPathInfo().replaceFirst("/", ""));
@@ -89,6 +90,7 @@ public class AddressApi extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         try {
+            req.setCharacterEncoding("UTF-8");
             if (req.getPathInfo() != null) {
                 errorResponse("Not allowed", "Invalid parameter.", HttpServletResponse.SC_METHOD_NOT_ALLOWED, res);
                 return;
@@ -118,6 +120,7 @@ public class AddressApi extends HttpServlet {
     @Override
     protected void doPut(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         try {
+            req.setCharacterEncoding("UTF-8");
             if (req.getPathInfo() == null) {
                 errorResponse("Not allowed", "Invalid parameter.", HttpServletResponse.SC_METHOD_NOT_ALLOWED, res);
                 return;
